@@ -1,0 +1,83 @@
+INPUT : 2.0 / ( 3.0 + 2.0 ) * 5.0
+POLISH: 2.0 3.0 2.0 + / 5.0 *
+ANSVER: 2.000000
+
+INPUT : 10.0 + 10.0 * 10.0
+POLISH: 10.0 10.0 10.0 * +
+ANSVER: 109.989980
+
+INPUT : ( ( 1.0 ) - 2.0 - ( ( -3.0 ) - ( 4.0 ) ) ) - 5.0 - ( -6.0 )
+POLISH: 1.0 2.0 - -3.0 4.0 - - 5.0 - -6.0 -
+ANSVER: 7.000000
+
+INPUT : 5.0 - ( 4.0 ) - x + ( ( x ) - x - ( ( x * -1.0 ) ) )
+POLISH: 5.0 4.0 - x - x x - x -1.0 * - +
+ANSVER: 1.000000
+
+INPUT : ( x * -1.0 ) - ( ( x * -1.0 ) )
+POLISH: x -1.0 * x -1.0 * -
+ANSVER: 0.000000
+
+INPUT : -5.0 mod -3.0
+POLISH: -5.0 -3.0 mod
+ANSVER: -2.000000
+
+INPUT : 2.0 ^ 3.0 ^ 4.0
+POLISH: 2.0 3.0 ^ 4.0 ^
+ANSVER: 4096.000000
+
+INPUT : 1.0 / 2.0 * ( 2.0 - 1.0 )
+POLISH: 1.0 2.0 / 2.0 1.0 - *
+ANSVER: 0.500000
+
+INPUT : ( 1.0 + 2.0 ) * ( ( 3.0 - 4.0 ) + 1.0 + ( 5.0 - 6.0 + 7.0 ) )
+POLISH: 1.0 2.0 + 3.0 4.0 - 1.0 + 5.0 6.0 - 7.0 + + *
+ANSVER: 18.000000
+
+INPUT : 1.1 + 2.0 + ( 3.0 * 4.0 ) + ( 5.0 + 6.8 )
+POLISH: 1.1 2.0 + 3.0 4.0 * + 5.0 6.8 + +
+ANSVER: 26.880000
+
+INPUT : 8.0 ^ ( 1.0 / ( ( x * -1.0 ) ) )
+POLISH: 8.0 1.0 x -1.0 * / ^
+ANSVER: 2.000000
+
+INPUT : asin ( ( x * -1.0 ) + 1.5 ) + acos ( ( x * -1.0 ) ) - atan ( x + 1.0 )
+POLISH: x -1.0 * 1.5 + asin x -1.0 * acos + x 1.0 + atan -
+ANSVER: 2.558043
+
+INPUT : log ( x ) + log ( -2.0 + 4.0 )
+POLISH: x log -2.0 4.0 + log +
+ANSVER: 2.693147
+
+INPUT : cos ( x ) ^ 2.0 + sin ( x ) ^ 2.0
+POLISH: x cos 2.0 ^ x sin 2.0 ^ +
+ANSVER: 1.000000
+
+INPUT : -1.0 * sin ( cos ( tan ( ( x * -1.0 ) ^ 2.0 ) ^ 3.0 ) ^ 4.0 )
+POLISH: -1.0 x -1.0 * 2.0 ^ tan 3.0 ^ cos 4.0 ^ sin *
+ANSVER: -0.547862
+
+INPUT : x
+POLISH: x
+ANSVER: 3.141593
+
+INPUT : ( x * -1.0 )
+POLISH: x -1.0 *
+ANSVER: -3.141593
+
+INPUT : x mod ( x + 1.0 )
+POLISH: x x 1.0 + mod
+ANSVER: 3.141593
+
+INPUT : 1.2 + 2.3 - 3.0
+POLISH: 1.2 2.3 + 3.0 -
+ANSVER: 0.580247
+
+INPUT : ( -1.0 + ( -1.0 - ( 1.0 + 1.0 ) ) - ( -1.0 + 1.0 ) - ( -1.0 + ( -1.0 ) ) )
+POLISH: -1.0 -1.0 1.0 1.0 + - + -1.0 1.0 + - -1.0 -1.0 + -
+ANSVER: -2.000000
+
+INPUT : sqrt ( x ) * ctg ( x )
+POLISH: x sqrt x ctg *
+ANSVER: -14473184040815420.000000
