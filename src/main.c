@@ -1,23 +1,27 @@
 #include "s21_smart.h"
 
 int main() {
+  char array[256] = {0};
 
-  lexeme *numbers = NULL;
-  lexeme *operators = NULL;
-  lexeme tmp;
   double result = 0;
-  char *string = "5 + 5 * 2";
-  s21_parser(string, &numbers, &operators, &result);
-  do {
-    printf("%f\n", numbers->value);
-    printf("%d\n", operators->priority);
-    printf("%d\n", operators->type);
-    printf("Isempty %d\n", s21_isempty(numbers));
-    printf("tmp = %d\n", tmp.value);
-    s21_pop(&numbers);
-    s21_pop(&operators);
+  char *string = "1 + 2 * 2 + 4";
+  s21_parser(string, &result);
 
-  } while (!s21_isempty(numbers) && !s21_isempty(operators));
+  // for (int i = 0, j = 0; i < strlen(string); i++) {
+  //   if ((string[i] >= 48 && string[i] <= 57) || string[i] == '.') {
+  //     array[j] = string[i];
+  //     j++;
+  //   }
+  //   if ((string[i] >= 48 && string[i] <= 57) && string[i + 1] != '.' &&
+  //       (string[i + 1] < 48 || string[i + 1] > 57)) {
+  //     array[j] = 58;
+  //     j++;
+  //   }
+  // }
+  // printf("\n");
+  // for (int i = 0; i < strlen(array); i++) {
+  //   printf("%c", array[i]);
+  // }
 
   return 0;
 }

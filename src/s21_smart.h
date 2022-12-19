@@ -42,11 +42,9 @@ typedef struct Node {
 void s21_push(lexeme **head, double value, int priority, lexeme_enum type);
 int s21_string_to_double(char *str, char **end, double *number);
 int s21_is_digit(char c);
-void *s21_pop(lexeme **head);
+void s21_pop(lexeme **head);
 lexeme s21_peek(lexeme *head);
 int s21_isempty(lexeme *head);
-void s21_parser(char *string, lexeme **numbers, lexeme **operators,
-                double *result);
-void s21_arithmetic(lexeme **operators, lexeme **numbers);
-
+void s21_parser(char *string, double *result);
+void s21_calc(lexeme **numbers, lexeme **operators, double *final);
 #endif // SRC_S21_SMART_H_
