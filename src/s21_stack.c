@@ -54,4 +54,8 @@ void s21_calc(lexeme **numbers, lexeme **operators, double *final) {
 }
 // char *string = "5.2 + 5 * 2 + 4";
 
-int s21_priority(lexeme **operators) { prioritet; }
+int s21_priority(lexeme **operators) {
+  ((*operators)->priority);
+  ((*operators)->priority);
+  ((*operators)->priority);
+}
