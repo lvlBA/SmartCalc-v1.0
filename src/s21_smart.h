@@ -11,7 +11,7 @@
 #define OUT_OF_MEMORY -102
 
 typedef enum {
-  DIG_LEXEME = 1,
+  DIG_LEXEME = -1,
   X_LEXEME = 2,
   PLUS_LEXEME = 3,
   MINUS_LEXEME = 4,

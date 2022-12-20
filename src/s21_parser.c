@@ -98,6 +98,14 @@ void s21_parser(char *string, double *result) {
         s21_calc(&numbers, &operators);
         // s21_pop(&operators);
       }
+      // if (operators->type != 4) {
+      //   printf("\nYES\n");
+      //   value = numbers->value * -1;
+      //   printf("\nVALUE%lf\n", value);
+      //   s21_pop(&numbers);
+      //   s21_pop(&operators);
+      //   s21_push(&numbers, value, 0, 0);
+      // }
     }
     // Cos
     if (string[i] == 'c' && string[i + 1] == 'o' && string[i + 2] == 's' &&
@@ -183,6 +191,7 @@ void s21_parser(char *string, double *result) {
     // Unarniy
     if (string[i] == '~') {
       s21_push(&operators, 0, 9, DIG_LEXEME);
+      s21_push(&operators, 0, 1, MINUS_LEXEME);
     }
   }
 

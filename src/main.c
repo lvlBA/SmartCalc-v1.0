@@ -4,7 +4,7 @@ int main() {
   char array[256] = {0};
 
   double result = 0;
-  char *string = "sqrt(25)+   4+5+6 + sqrt(25)    ";
+  char *string = "5 - (4+5+6) *2 - 5    ";
   s21_parser(string, &result);
 
   // for (int i = 0, j = 0; i < strlen(string); i++) {

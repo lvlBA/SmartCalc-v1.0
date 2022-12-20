@@ -36,12 +36,11 @@ void s21_calc(lexeme **numbers, lexeme **operators) {
   }
   double first = 0, second = 0, tmp = 0, flag = 0;
   first = ((*numbers)->value);
-  printf("\nfirst: %lf ", first);
+  printf("\nfirst\n: %lf ", first);
   s21_pop(numbers);
   second = ((*numbers)->value);
-  printf("\nsecond: %lf ", second);
+  printf("\nsecond\n: %lf ", second);
   s21_pop(numbers);
-  printf("\nsign is equal to %d ", (*operators)->type);
 
   if ((*operators)->type == 6) {
     tmp = first * second;
@@ -83,11 +82,9 @@ void s21_calc(lexeme **numbers, lexeme **operators) {
 }
 // char *string = "5.2 + 5 * 2 + 4";
 void s21_calc_func(lexeme **numbers, lexeme **operators) {
-
   double first = 0, tmp = 0;
-
   first = ((*numbers)->value);
-  printf("\nATAN %lf \n", first);
+  printf("\nSQRT %lf \n", first);
   s21_pop(numbers);
   if ((*operators)->type == 11) {
     tmp = cos(first);
@@ -116,7 +113,8 @@ void s21_calc_func(lexeme **numbers, lexeme **operators) {
   if ((*operators)->type == 19) {
     tmp = log10(first);
   }
-  printf("\nATAN %lf \n", tmp);
+
+  printf("\nSQRT  %lf \n", tmp);
 
   s21_pop(operators);
   s21_push(numbers, tmp, 0, 0);
