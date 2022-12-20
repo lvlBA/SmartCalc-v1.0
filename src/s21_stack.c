@@ -57,8 +57,15 @@ void s21_calc(lexeme **numbers, lexeme **operators) {
     tmp = second / first;
     flag = 1;
   }
+  if ((*operators)->type == 7) {
+    tmp = pow(second, first);
+  }
+  if ((*operators)->type == 7) {
+    tmp = (int)second % (int)first;
+  }
   if (!s21_isempty(*operators)) {
     s21_pop(operators);
+    flag = 1;
   }
 
   // delenie i umnozhenie s minusom
@@ -75,3 +82,42 @@ void s21_calc(lexeme **numbers, lexeme **operators) {
   printf("\ntmp == %lf", tmp);
 }
 // char *string = "5.2 + 5 * 2 + 4";
+void s21_calc_func(lexeme **numbers, lexeme **operators) {
+
+  double first = 0, tmp = 0;
+
+  first = ((*numbers)->value);
+  printf("\nATAN %lf \n", first);
+  s21_pop(numbers);
+  if ((*operators)->type == 11) {
+    tmp = cos(first);
+  }
+  if ((*operators)->type == 12) {
+    tmp = sin(first);
+  }
+  if ((*operators)->type == 13) {
+    tmp = tan(first);
+  }
+  if ((*operators)->type == 14) {
+    tmp = acos(first);
+  }
+  if ((*operators)->type == 15) {
+    tmp = asin(first);
+  }
+  if ((*operators)->type == 16) {
+    tmp = atan(first);
+  }
+  if ((*operators)->type == 17) {
+    tmp = sqrt(first);
+  }
+  if ((*operators)->type == 18) {
+    tmp = log(first);
+  }
+  if ((*operators)->type == 19) {
+    tmp = log10(first);
+  }
+  printf("\nATAN %lf \n", tmp);
+
+  s21_pop(operators);
+  s21_push(numbers, tmp, 0, 0);
+}
