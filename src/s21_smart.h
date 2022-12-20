@@ -46,5 +46,5 @@ void s21_pop(lexeme **head);
 lexeme s21_peek(lexeme *head);
 int s21_isempty(lexeme *head);
 void s21_parser(char *string, double *result);
-void s21_calc(lexeme **numbers, lexeme **operators, double *final);
+void s21_calc(lexeme **numbers, lexeme **operators);
 #endif // SRC_S21_SMART_H_
