@@ -6,12 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define STACK_OVERFLOW -100
-#define STACK_UNDERFLOW -101
-#define OUT_OF_MEMORY -102
-
 typedef enum {
-  DIG_LEXEME = -1,
+  DIG_LEXEME = 1,
   X_LEXEME = 2,
   PLUS_LEXEME = 3,
   MINUS_LEXEME = 4,
@@ -35,17 +31,22 @@ typedef enum {
 typedef struct Node {
   double value;
   int priority;
-  lexeme_enum type;
   struct Node *next;
+  lexeme_enum type;
 } lexeme;
 
-void s21_push(lexeme **head, double value, int priority, lexeme_enum type);
+void s21_push(lexeme **head, double value, int type, int priority);
 int s21_string_to_double(char *str, char **end, double *number);
 int s21_is_digit(char c);
+int s21_next_sym(lexeme **head);
 void s21_pop(lexeme **head);
+lexeme s21_top(lexeme **head);
 lexeme s21_peek(lexeme *head);
-int s21_isempty(lexeme *head);
-void s21_parser(char *string, double *result);
-void s21_calc(lexeme **numbers, lexeme **operators);
-void s21_calc_func(lexeme **numbers, lexeme **operators);
-#endif // SRC_S21_SMART_H_
+lexeme s21_parser(char *lexem, char **end);
+lexeme s21_calc(double first, double second, int type);
+lexeme s21_calc_func(double first, int type);
+int s21_check_string(char *str);
+void s21_calculation(lexeme **numbers, lexeme **operators);
+void s21_logic(lexeme **numbers, lexeme **operators, lexeme tmp, double x);
+double s21_smart_calc(char *string, double x);
+#endif  // SRC_S21_SMART_H_

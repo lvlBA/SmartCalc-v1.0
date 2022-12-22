@@ -6,7 +6,7 @@ LINUX_FLAGS=-lsubunit -lrt -lpthread -lm
 LIBS=-lcheck
 VALGRIND_FLAGS=--trace-children=yes --track-fds=yes --track-origins=yes --leak-check=full --show-leak-kinds=all --verbose
 
-TARGET=s21_matrix.a
+TARGET=s21_smart.a
 
 SRC=$(wildcard s21_*.c)
 OBJ=$(patsubst %.c,%.o, ${SRC})

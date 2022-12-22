@@ -25,6 +25,13 @@
     "istream": "c",
     "ostream": "c",
     "array": "c",
-    "utility": "c"
+    "utility": "c",
+    "sstream": "c",
+    "memory": "c",
+    "__locale": "c",
+    "string": "c",
+    "iosfwd": "c",
+    "s21_smart.h": "c",
+    "math.h": "c"
   }
 }
