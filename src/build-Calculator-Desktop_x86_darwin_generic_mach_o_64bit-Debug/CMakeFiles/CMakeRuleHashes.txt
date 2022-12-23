@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+f751acafd9745efe0d45ffd4950d8ae1 /Users/bernardi/C7_SmartCalc_v1.0-0/src/Calculator/Calculator_en_GB.ts
+dbcd2c8939fbb0e436afa177e3fd6fe2 CMakeFiles/Calculator_autogen

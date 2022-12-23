@@ -36,7 +36,7 @@ double s21_smart_calc(char *string, double x) {
 }
 
 lexeme s21_parser(char *lexem, char **end) {
-  lexeme operators;
+  lexeme operators = {0};
   int i = 0;
   if (lexem[i] == '+') {
     operators.type = PLUS_LEXEME;

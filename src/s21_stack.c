@@ -1,7 +1,8 @@
 #include "s21_smart.h"
 
 void s21_push(lexeme **head, double value, int type, int priority) {
-  lexeme *tmp = (lexeme *)malloc(sizeof(lexeme));
+  lexeme *tmp = NULL;
+  tmp = (lexeme *)malloc(sizeof(lexeme));
   tmp->value = value;
   tmp->type = type;
   tmp->priority = priority;

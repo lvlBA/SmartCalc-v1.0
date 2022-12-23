@@ -24,7 +24,7 @@ void s21_calculation(lexeme **numbers, lexeme **operators) {
 }
 
 lexeme s21_calc(double first, double second, int type) {
-  lexeme result;
+  lexeme result = {0};
   result.priority = 0;
   result.type = DIG_LEXEME;
   if (type == MUL_LEXEME) {
