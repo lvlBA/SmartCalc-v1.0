@@ -60,7 +60,7 @@ ui->label_show->setText(new_label);
 
 void MainWindow::on_pushButton_dot_clicked()
 {
-    if (!(ui->label_show->text().contains('.')))
+    if (!(ui->label_show->text().endsWith('.')))
         ui->label_show->setText(ui->label_show->text() + ".");
 }
 
