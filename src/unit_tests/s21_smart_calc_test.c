@@ -37,21 +37,21 @@ START_TEST(s21_test_3) {
 END_TEST
 
 START_TEST(calc_test) {
-  {
-    char src[100] = "-(o(i(a(10.01)*n(2))/10m2))^q(5)";
-    int result = s21_validator(src);
-    ck_assert_msg(result, "test-10 failed");
-  }
-  {
-    char src[100] = ")(s(x)";
-    int result = s21_validator(src);
-    ck_assert_msg(!result, "test-10 failed");
-  }
-  {
-    char src[100] = ".+m)";
-    int result = s21_validator(src);
-    ck_assert_msg(!result, "test-10 failed");
-  }
+  // {
+  //   char src[100] = "-(o(i(a(10.01)*n(2))/10m2))^q(5)";
+  //   int result = s21_validator(src);
+  //   ck_assert_msg(result, "test-10 failed");
+  // }
+  // {
+  //   char src[100] = ")(s(x)";
+  //   int result = s21_validator(src);
+  //   ck_assert_msg(!result, "test-10 failed");
+  // }
+  // {
+  //   char src[100] = ".+m)";
+  //   int result = s21_validator(src);
+  //   ck_assert_msg(!result, "test-10 failed");
+  // }
   {
     char src[100] = "123+0.456";
     double result = s21_smart_calc(src, 0);

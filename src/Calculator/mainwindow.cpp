@@ -1,8 +1,11 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
+#include <QLabel>
+#include <QString>
+
 extern "C" {
-#include "s21_smart.h"
+#include "../s21_smart.h"
 }
 
 MainWindow::MainWindow(QWidget *parent)
@@ -39,9 +42,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_leftScobe, SIGNAL(clicked()), this, SLOT(operations()));
     connect(ui->pushButton_rightScobe, SIGNAL(clicked()), this, SLOT(operations()));
     connect(ui->pushButton_x, SIGNAL(clicked()), this, SLOT(operations()));
-
-
-
+    connect(ui->pushButton_ac, SIGNAL(clicked()), this, SLOT(on_pushButton_DELETE_clicked()));
+    connect(ui->pushButton_equal, SIGNAL(clicked()), this, SLOT(on_pushButton_EQUAL_clicked()));
 
 }
 
@@ -53,12 +55,16 @@ MainWindow::~MainWindow()
 void MainWindow:: digits_numbers()
 {
 QPushButton *button = (QPushButton *)sender();
+
 double all_numbers;
-QString new_label;
-all_numbers = (ui->label_show->text() + button->text()).toDouble();
-new_label = QString::number(all_numbers, 'g', 15);
+
+
+QString new_label = ui->label_show->text() + button->text();
+
 ui->label_show->setText(new_label);
+
 }
+
 
 void MainWindow::on_pushButton_dot_clicked()
 {
@@ -72,78 +78,89 @@ QPushButton *button = (QPushButton *)sender();
 double all_numbers;
 QString new_label;
 
+new_label = ui->label_show->text();
+
+
 if(button->text() == "+") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "+");
+    new_label += "+";
 } else if (button->text() == "-") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "-");
+    new_label += "-";
 } else if (button->text() == "*") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "*");
+    new_label += "*";
 } else if (button->text() == "÷") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "÷");
+    new_label += "÷";
 } else if (button->text() == "%") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "%");
+    new_label += "%";
 }else if (button->text() == "√") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "√");
+    new_label += "√";
 }else if (button->text() == "^") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "^");
+    new_label += "^";
 } else if (button->text() == "ln") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "ln");
+    new_label += "ln";
 } else if (button->text() == "log") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "log");
+    new_label += "log";
 } else if (button->text() == "sin") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "sin");
+    new_label += "sin";
 } else if (button->text() == "asin") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "asin");
+    new_label += "asin";
 } else if (button->text() == "tan") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "tan");
+    new_label += "tan";
 } else if (button->text() == "atan") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "atan");
+    new_label += "atan";
 } else if (button->text() == "cos") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "cos");
+    new_label += "cos";
 } else if (button->text() == "acos") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "acos");
+    new_label += "acos";
 } else if (button->text() == "(") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "(");
+    new_label += "(";
 } else if (button->text() == ")") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + ")");
+    new_label += ")";
 } else if (button->text() == "x") {
-    all_numbers = (button->text()).toDouble();
-    new_label = QString::number(all_numbers, 'g', 15);
-    ui->label_show->setText(ui->label_show->text() + "x");
+    new_label += "x";
 }
+ui->label_show->setText(new_label);
+
+}
+
+
+
+
+void MainWindow::on_pushButton_equal_clicked()
+{
+        char* str = new char(ui->label_show->text().length());
+        QByteArray barr = ui->label_show->text().toLatin1();
+        strlcpy(str, barr, ui->label_show->text().length() + 1);
+
+//        if (check(str) == 0) {
+//            ui->label_show->setText("Invalid Input");
+//        } else if (ui->label_show->text().contains("x")) {
+//            window2->on_to_draw_button_clicked(str);
+//            window2->show();
+//        } else {
+
+            double result = s21_smart_calc(str, 0);
+
+            QString numberResult = QString::number(result, 'g', 15);
+            ui->label_show->setText(numberResult);
+//        }
+        delete(str);
+
+}
+
+
+void MainWindow::on_pushButton_DELETE_clicked()
+{
+    ui->label_show->setText("0");
+}
+
+void MainWindow::on_pushButton_X_clicked()
+{
+
+    QString new_label;
+
+    if (!(ui->label_show->text().endsWith("x")))
+        new_label = ui->label_show->text() + "x";
+
+    ui->label_show->setText(new_label);
 }
 

@@ -291,7 +291,8 @@ CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o: Calculator_
   /usr/local/include/QtGui/qbitmap.h \
   /usr/local/include/QtGui/qkeysequence.h \
   /usr/local/include/QtWidgets/qtabwidget.h \
-  /usr/local/include/QtGui/qicon.h
+  /usr/local/include/QtGui/qicon.h \
+  /Users/bernardi/C7_SmartCalc_v1.0-0/src/s21_smart.h
 
 CMakeFiles/Calculator.dir/main.cpp.o: /Users/bernardi/C7_SmartCalc_v1.0-0/src/Calculator/main.cpp \
   /Users/bernardi/C7_SmartCalc_v1.0-0/src/Calculator/mainwindow.h \
@@ -583,6 +584,7 @@ CMakeFiles/Calculator.dir/main.cpp.o: /Users/bernardi/C7_SmartCalc_v1.0-0/src/Ca
   /usr/local/include/QtGui/qkeysequence.h \
   /usr/local/include/QtWidgets/qtabwidget.h \
   /usr/local/include/QtGui/qicon.h \
+  /Users/bernardi/C7_SmartCalc_v1.0-0/src/s21_smart.h \
   /usr/local/lib/QtWidgets.framework/Headers/QApplication \
   /usr/local/lib/QtWidgets.framework/Headers/qapplication.h \
   /usr/local/include/QtCore/qcoreapplication.h \
@@ -606,7 +608,14 @@ CMakeFiles/Calculator.dir/main.cpp.o: /Users/bernardi/C7_SmartCalc_v1.0-0/src/Ca
   /usr/local/lib/QtCore.framework/Headers/QLocale \
   /usr/local/lib/QtCore.framework/Headers/qlocale.h \
   /usr/local/lib/QtCore.framework/Headers/QTranslator \
-  /usr/local/lib/QtCore.framework/Headers/qtranslator.h
+  /usr/local/lib/QtCore.framework/Headers/qtranslator.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QLabel \
+  /usr/local/lib/QtWidgets.framework/Headers/qlabel.h \
+  /usr/local/include/QtWidgets/qframe.h \
+  /usr/local/include/QtGui/qpicture.h \
+  /usr/local/include/QtCore/qiodevice.h \
+  /usr/local/include/QtGui/qtextdocument.h \
+  /usr/local/include/QtCore/qurl.h
 
 CMakeFiles/Calculator.dir/mainwindow.cpp.o: /Users/bernardi/C7_SmartCalc_v1.0-0/src/Calculator/mainwindow.cpp \
   /Users/bernardi/C7_SmartCalc_v1.0-0/src/Calculator/mainwindow.h \
@@ -898,6 +907,7 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o: /Users/bernardi/C7_SmartCalc_v1.0-0/
   /usr/local/include/QtGui/qkeysequence.h \
   /usr/local/include/QtWidgets/qtabwidget.h \
   /usr/local/include/QtGui/qicon.h \
+  /Users/bernardi/C7_SmartCalc_v1.0-0/src/s21_smart.h \
   Calculator_autogen/include/ui_mainwindow.h \
   /usr/local/include/QtCore/QVariant \
   /usr/local/lib/QtCore.framework/Headers/qvariant.h \
@@ -933,8 +943,13 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o: /Users/bernardi/C7_SmartCalc_v1.0-0/
   /usr/local/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /usr/local/include/QtWidgets/qabstractbutton.h \
   /usr/local/include/QtWidgets/QWidget \
-  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h
+  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QLabel \
+  /usr/local/lib/QtCore.framework/Headers/QString \
+  /usr/local/lib/QtCore.framework/Headers/qstring.h
 
+
+/usr/local/lib/QtCore.framework/Headers/qstring.h:
 
 /usr/local/include/QtWidgets/QWidget:
 
@@ -944,15 +959,15 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o: /Users/bernardi/C7_SmartCalc_v1.0-0/
 
 /usr/local/include/QtWidgets/QPushButton:
 
+/usr/local/include/QtCore/QVariant:
+
+/Users/bernardi/C7_SmartCalc_v1.0-0/src/Calculator/mainwindow.cpp:
+
 /usr/local/include/QtCore/qurl.h:
 
 /usr/local/include/QtGui/qtextdocument.h:
 
 /usr/local/include/QtCore/qiodevice.h:
-
-/usr/local/include/QtCore/QVariant:
-
-/Users/bernardi/C7_SmartCalc_v1.0-0/src/Calculator/mainwindow.cpp:
 
 /usr/local/lib/QtCore.framework/Headers/QLocale:
 
@@ -977,6 +992,8 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o: /Users/bernardi/C7_SmartCalc_v1.0-0/
 /usr/local/include/QtWidgets/qframe.h:
 
 /usr/local/lib/QtWidgets.framework/Headers/QApplication:
+
+/Users/bernardi/C7_SmartCalc_v1.0-0/src/s21_smart.h:
 
 /usr/local/include/QtGui/qkeysequence.h:
 
@@ -1067,6 +1084,8 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o: /Users/bernardi/C7_SmartCalc_v1.0-0/
 /usr/local/include/QtCore/qcontainerinfo.h:
 
 /usr/local/include/QtCore/qarraydatapointer.h:
+
+/usr/local/lib/QtWidgets.framework/Headers/QLabel:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__split_buffer:
 
@@ -1529,6 +1548,8 @@ Calculator_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 /usr/local/include/QtCore/qiterable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config:
+
+/usr/local/lib/QtCore.framework/Headers/QString:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/pthread.h:
 

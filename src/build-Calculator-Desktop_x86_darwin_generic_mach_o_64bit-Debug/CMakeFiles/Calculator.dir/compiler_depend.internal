@@ -293,6 +293,7 @@ CMakeFiles/Calculator.dir/Calculator_autogen/mocs_compilation.cpp.o
  /usr/local/include/QtGui/qkeysequence.h
  /usr/local/include/QtWidgets/qtabwidget.h
  /usr/local/include/QtGui/qicon.h
+ /Users/bernardi/C7_SmartCalc_v1.0-0/src/s21_smart.h
 
 CMakeFiles/Calculator.dir/main.cpp.o
  /Users/bernardi/C7_SmartCalc_v1.0-0/src/Calculator/main.cpp
@@ -585,6 +586,7 @@ CMakeFiles/Calculator.dir/main.cpp.o
  /usr/local/include/QtGui/qkeysequence.h
  /usr/local/include/QtWidgets/qtabwidget.h
  /usr/local/include/QtGui/qicon.h
+ /Users/bernardi/C7_SmartCalc_v1.0-0/src/s21_smart.h
  /usr/local/lib/QtWidgets.framework/Headers/QApplication
  /usr/local/lib/QtWidgets.framework/Headers/qapplication.h
  /usr/local/include/QtCore/qcoreapplication.h
@@ -609,6 +611,13 @@ CMakeFiles/Calculator.dir/main.cpp.o
  /usr/local/lib/QtCore.framework/Headers/qlocale.h
  /usr/local/lib/QtCore.framework/Headers/QTranslator
  /usr/local/lib/QtCore.framework/Headers/qtranslator.h
+ /usr/local/lib/QtWidgets.framework/Headers/QLabel
+ /usr/local/lib/QtWidgets.framework/Headers/qlabel.h
+ /usr/local/include/QtWidgets/qframe.h
+ /usr/local/include/QtGui/qpicture.h
+ /usr/local/include/QtCore/qiodevice.h
+ /usr/local/include/QtGui/qtextdocument.h
+ /usr/local/include/QtCore/qurl.h
 
 CMakeFiles/Calculator.dir/mainwindow.cpp.o
  /Users/bernardi/C7_SmartCalc_v1.0-0/src/Calculator/mainwindow.cpp
@@ -901,6 +910,7 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o
  /usr/local/include/QtGui/qkeysequence.h
  /usr/local/include/QtWidgets/qtabwidget.h
  /usr/local/include/QtGui/qicon.h
+ /Users/bernardi/C7_SmartCalc_v1.0-0/src/s21_smart.h
  /Users/bernardi/C7_SmartCalc_v1.0-0/src/build-Calculator-Desktop_x86_darwin_generic_mach_o_64bit-Debug/Calculator_autogen/include/ui_mainwindow.h
  /usr/local/include/QtCore/QVariant
  /usr/local/lib/QtCore.framework/Headers/qvariant.h
@@ -937,4 +947,7 @@ CMakeFiles/Calculator.dir/mainwindow.cpp.o
  /usr/local/include/QtWidgets/qabstractbutton.h
  /usr/local/include/QtWidgets/QWidget
  /usr/local/lib/QtWidgets.framework/Headers/qwidget.h
+ /usr/local/lib/QtWidgets.framework/Headers/QLabel
+ /usr/local/lib/QtCore.framework/Headers/QString
+ /usr/local/lib/QtCore.framework/Headers/qstring.h
 
