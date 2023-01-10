@@ -113,11 +113,7 @@ if(button->text() == "+") {
     new_label += "x";
 }
 ui->label_show->setText(new_label);
-
 }
-
-
-
 
 void MainWindow::on_pushButton_equal_clicked()
 {
@@ -131,8 +127,7 @@ void MainWindow::on_pushButton_equal_clicked()
         else if (ui->label_show->text().contains("x")) {
             window2->on_to_draw_button_clicked(str);
             window2->show();
-        }
-else {
+        } else {
 
             double result = s21_smart_calc(str, 0);
 
@@ -140,7 +135,6 @@ else {
             ui->label_show->setText(numberResult);
         }
         delete(str);
-
 }
 
 

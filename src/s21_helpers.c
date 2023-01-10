@@ -21,6 +21,14 @@ int s21_check_string(char *str) {
         res = 0;
       }
     }
+    if (str[cnt] == 'x' && str[cnt + 1] == 'x') {
+      res = 0;
+    }
+    if (str[cnt] == '(' && str[cnt + 1] == 'x' && str[cnt + 2] == ')' &&
+        str[cnt + 3] == '(' && str[cnt + 4] == 'x' && str[cnt + 5] == ')') {
+      res = 0;
+    }
+
     if (str[cnt] == '.') {
       if (cnt == 0 || cnt == (int)strlen(str) - 1) {
         res = 0;
