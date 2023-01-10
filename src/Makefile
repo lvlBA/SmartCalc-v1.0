@@ -29,6 +29,14 @@ endif
 .DELETE_ON_ERROR:
 all: $(TARGET)
 
+install:	
+	make clean
+	mkdir build
+	cd S21_calc && qmake && make && make clean && rm Makefile && cd ../ && mv S21_calc/S21_calc.app build
+
+uninstall:
+	rm -rf build* 	
+
 $(TARGET): ${SRC}
 	$(CC) -c $(STDFLAGS) $(SRC)
 	ar rc $@ $(OBJ)
@@ -64,7 +72,7 @@ clang:
 	clang-format -style=Google -n *.c *.h; \
 	rm .clang-format
 
-brsw:
+brew:
 	eval /opt/goinfre/$(USERNAME)/homebrew/bin/brew shellenv; \
 	brew update --force --quiet; \
 	chmod -R go-w "$(brew --prefix)/share/zsh"
