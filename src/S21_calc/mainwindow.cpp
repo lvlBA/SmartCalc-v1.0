@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "./mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QLabel>
 #include <QString>
@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    window2 = new GraphWindow(this);
+
 
     connect(ui->pushButton_zero, SIGNAL(clicked()), this, SLOT(digits_numbers()));
     connect(ui->pushButton_one, SIGNAL(clicked()), this, SLOT(digits_numbers()));
@@ -27,19 +29,20 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_mod, SIGNAL(clicked()), this, SLOT(operations()));
     connect(ui->pushButton_sqrt, SIGNAL(clicked()), this, SLOT(operations()));
     connect(ui->pushButton_pow, SIGNAL(clicked()), this, SLOT(operations()));
-    connect(ui->pushButton_ln, SIGNAL(clicked()), this, SLOT(operations()));
-    connect(ui->pushButton_log, SIGNAL(clicked()), this, SLOT(operations()));
-    connect(ui->pushButton_sin, SIGNAL(clicked()), this, SLOT(operations()));
-    connect(ui->pushButton_asin, SIGNAL(clicked()), this, SLOT(operations()));
-    connect(ui->pushButton_tan, SIGNAL(clicked()), this, SLOT(operations()));
-    connect(ui->pushButton_atan, SIGNAL(clicked()), this, SLOT(operations()));
-    connect(ui->pushButton_cos, SIGNAL(clicked()), this, SLOT(operations()));
-    connect(ui->pushButton_acos, SIGNAL(clicked()), this, SLOT(operations()));
+    connect(ui->pushButton_ln, SIGNAL(clicked()), this, SLOT(functions()));
+    connect(ui->pushButton_log, SIGNAL(clicked()), this, SLOT(functions()));
+    connect(ui->pushButton_sin, SIGNAL(clicked()), this, SLOT(functions()));
+    connect(ui->pushButton_asin, SIGNAL(clicked()), this, SLOT(functions()));
+    connect(ui->pushButton_tan, SIGNAL(clicked()), this, SLOT(functions()));
+    connect(ui->pushButton_atan, SIGNAL(clicked()), this, SLOT(functions()));
+    connect(ui->pushButton_cos, SIGNAL(clicked()), this, SLOT(functions()));
+    connect(ui->pushButton_acos, SIGNAL(clicked()), this, SLOT(functions()));
     connect(ui->pushButton_leftScobe, SIGNAL(clicked()), this, SLOT(operations()));
     connect(ui->pushButton_rightScobe, SIGNAL(clicked()), this, SLOT(operations()));
     connect(ui->pushButton_x, SIGNAL(clicked()), this, SLOT(operations()));
     connect(ui->pushButton_ac, SIGNAL(clicked()), this, SLOT(on_pushButton_DELETE_clicked()));
     connect(ui->pushButton_equal, SIGNAL(clicked()), this, SLOT(on_pushButton_EQUAL_clicked()));
+
 
 }
 
@@ -125,10 +128,10 @@ void MainWindow::on_pushButton_equal_clicked()
         if (s21_check_string(str) == 0) {
             ui->label_show->setText("Invalid Input");
         }
-//        else if (ui->label_show->text().contains("x")) {
-//            window2->on_to_draw_button_clicked(str);
-//            window2->show();
-//        }
+        else if (ui->label_show->text().contains("x")) {
+            window2->on_to_draw_button_clicked(str);
+            window2->show();
+        }
 else {
 
             double result = s21_smart_calc(str, 0);
@@ -148,11 +151,21 @@ void MainWindow::on_pushButton_DELETE_clicked()
 
 void MainWindow::on_pushButton_X_clicked()
 {
-
     QString new_label;
 
     if (!(ui->label_show->text().endsWith("x")))
         new_label = ui->label_show->text() + "x";
+
+    ui->label_show->setText(new_label);
+}
+
+void MainWindow::functions()
+{
+    QPushButton *button = (QPushButton *)sender();
+
+    QString new_label;
+
+    new_label = ui->label_show->text() + button->text() + "(";
 
     ui->label_show->setText(new_label);
 }

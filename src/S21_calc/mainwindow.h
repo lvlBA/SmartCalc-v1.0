@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "graphwindow.h"
+
 
 extern "C" {
 #include "../s21_smart.h"
@@ -21,6 +23,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    GraphWindow *window2;
+
 
 private slots:
     void digits_numbers();
@@ -29,5 +33,6 @@ private slots:
     void on_pushButton_equal_clicked();
     void on_pushButton_DELETE_clicked();
     void on_pushButton_X_clicked();
+    void functions();
 };
 #endif // MAINWINDOW_H

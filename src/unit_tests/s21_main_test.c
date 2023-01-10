@@ -11,7 +11,8 @@ void run_tests(void) {
 void run_testcase(Suite *testcase) {
   static int counter_testcase = 1;
 
-  if (counter_testcase > 0) putchar('\n');
+  if (counter_testcase > 0)
+    putchar('\n');
   counter_testcase++;
   SRunner *sr = srunner_create(testcase);
 
@@ -19,11 +20,6 @@ void run_testcase(Suite *testcase) {
   srunner_run_all(sr, CK_NORMAL);
 
   srunner_free(sr);
-}
-
-double get_rand(double min, double max) {
-  double val = (double)rand() / RAND_MAX;
-  return min + val * (max - min);
 }
 
 int main(void) {
