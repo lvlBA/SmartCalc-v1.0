@@ -32,6 +32,8 @@
     "string": "c",
     "iosfwd": "c",
     "s21_smart.h": "c",
-    "math.h": "c"
+    "math.h": "c",
+    "string_view": "cpp",
+    "ranges": "cpp"
   }
 }

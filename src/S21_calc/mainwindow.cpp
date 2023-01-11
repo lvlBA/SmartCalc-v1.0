@@ -67,41 +67,27 @@ void MainWindow::operations() {
 
   new_label = ui->label_show->text();
 
-  if (button->text() == "+") {
-    new_label += "+";
-  } else if (button->text() == "-") {
-    new_label += "-";
-  } else if (button->text() == "*") {
-    new_label += "*";
-  } else if (button->text() == "÷") {
+  if (button->text() == "÷" && !(ui->label_show->text().endsWith("÷")) &&
+      !(ui->label_show->text().endsWith("/"))) {
     new_label += "/";
-  } else if (button->text() == "%") {
-    new_label += "mod";
-  } else if (button->text() == "√") {
-    new_label += "sqrt";
-  } else if (button->text() == "^") {
+  } else if (button->text() == "*" && !(ui->label_show->text().endsWith("*")) &&
+             !(ui->label_show->text().endsWith("*"))) {
+    new_label += "*";
+  } else if (button->text() == "+" && !(ui->label_show->text().endsWith("+"))) {
+    new_label += "+";
+  } else if (button->text() == "-" && !(ui->label_show->text().endsWith("-"))) {
+    new_label += "-";
+  } else if (button->text() == "^" && !(ui->label_show->text().endsWith("^"))) {
     new_label += "^";
-  } else if (button->text() == "ln") {
-    new_label += "ln";
-  } else if (button->text() == "log") {
-    new_label += "log";
-  } else if (button->text() == "sin") {
-    new_label += "sin";
-  } else if (button->text() == "asin") {
-    new_label += "asin";
-  } else if (button->text() == "tan") {
-    new_label += "tan";
-  } else if (button->text() == "atan") {
-    new_label += "atan";
-  } else if (button->text() == "cos") {
-    new_label += "cos";
-  } else if (button->text() == "acos") {
-    new_label += "acos";
+  } else if (button->text() == "%" && !(ui->label_show->text().endsWith("%"))) {
+    new_label += "mod";
+  } else if (button->text() == "√" && !(ui->label_show->text().endsWith("√"))) {
+    new_label += "sqrt";
   } else if (button->text() == "(") {
     new_label += "(";
   } else if (button->text() == ")") {
     new_label += ")";
-  } else if (button->text() == "x") {
+  } else if (button->text() == "x" && !(ui->label_show->text().endsWith("x"))) {
     new_label += "x";
   }
   ui->label_show->setText(new_label);
@@ -109,8 +95,9 @@ void MainWindow::operations() {
 
 void MainWindow::on_pushButton_equal_clicked() {
   char *str = new char(ui->label_show->text().length());
-  QByteArray barr = ui->label_show->text().toLatin1();
-  strlcpy(str, barr, ui->label_show->text().length() + 1);
+
+  QByteArray ba = ui->label_show->text().toLocal8Bit();
+  strlcpy(str, ba, ui->label_show->text().length() + 1);
 
   if (s21_check_string(str) == 0) {
     ui->label_show->setText("Invalid Input");
@@ -121,7 +108,7 @@ void MainWindow::on_pushButton_equal_clicked() {
 
     double result = s21_smart_calc(str, 0);
 
-    QString numberResult = QString::number(result, 'g', 255);
+    QString numberResult = QString::number(result, 'g', 15);
     ui->label_show->setText(numberResult);
   }
   delete (str);

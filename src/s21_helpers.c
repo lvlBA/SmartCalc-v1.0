@@ -10,6 +10,7 @@ int s21_is_digit(char c) {
 
 int s21_check_string(char *str) {
   int res = 1, cnt = 0, scob = 0;
+
   while (cnt != (int)strlen(str)) {
     if (str[cnt] == 'x' && cnt != 0 && cnt != (int)strlen(str)) {
       if (str[cnt - 1] == ')' || str[cnt + 1] == '(' ||
@@ -143,6 +144,12 @@ int s21_check_string(char *str) {
         res = 0;
       }
     }
+
+    if (cnt == (int)strlen(str) - 1 && (str[cnt] == '+' || str[cnt] == '-' ||
+                                        str[cnt] == '/' || str[cnt] == '*')) {
+      res = 0;
+    }
+
     cnt++;
   }
   if (scob != 0) {

@@ -45,6 +45,12 @@ START_TEST(s21_test_3) {
   ck_assert_double_eq(x, orig);
 }
 END_TEST
+START_TEST(s21_test_400) {
+
+  char src[100] = "7--7";
+  int result = s21_check_string(src);
+  ck_assert_msg(result, "test-10 failed");
+}
 
 START_TEST(calc_test) {
   {
@@ -52,6 +58,7 @@ START_TEST(calc_test) {
     int result = s21_check_string(src);
     ck_assert_msg(result, "test-10 failed");
   }
+
   {
     char src[100] = ")(s(x)";
     int result = s21_check_string(src);
@@ -380,6 +387,7 @@ Suite *suite_smart_calc(void) {
   tcase_add_test(tc, s21_test_0);
   tcase_add_test(tc, s21_test_1);
   tcase_add_test(tc, s21_test_100);
+  tcase_add_test(tc, s21_test_400);
   tcase_add_test(tc, s21_test_2);
   tcase_add_test(tc, s21_test_3);
   tcase_add_test(tc, calc_test);
