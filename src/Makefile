@@ -4,7 +4,6 @@ TST_CFLAGS:= -g $(STDFLAGS) -g
 GCOV_FLAGS?=-fprofile-arcs -ftest-coverage
 LINUX_FLAGS=-lsubunit -lrt -lpthread -lm
 LIBS=-lcheck
-VALGRIND_FLAGS=--trace-children=yes --track-fds=yes --track-origins=yes --leak-check=full --show-leak-kinds=all --verbose
 
 TARGET=s21_smart.a
 
@@ -75,9 +74,7 @@ endif
 	genhtml -o report s21_test.info
 	$(OPEN_CMD) ./report/index.html
 
-valgrind: $(TARGET)
-	$(CC) $(TST_CFLAGS) ${TEST_SRC} $< -o test $(LIBS) $(LINUX_FLAGS)
-	CK_FORK=no valgrind $(VALGRIND_FLAGS) --log-file=RESULT_VALGRIND.txt ./test
+
 
 clang:
 	cp ../materials/linters/.clang-format ../src/.clang-format; \
@@ -113,6 +110,5 @@ clean_test:
 
 clean: clean_lib clean_lib clean_test clean_obj
 	rm -rf unit_test
-	rm -rf RESULT_VALGRIND.txt
 
 .PHONY: all clean check lcov

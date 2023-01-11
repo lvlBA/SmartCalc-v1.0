@@ -18,6 +18,16 @@ START_TEST(s21_test_1) {
 }
 END_TEST
 
+START_TEST(s21_test_100) {
+  double x = 0;
+  double orig = 180;
+  char str[255] = "3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+"
+                  "3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3+3";
+  x = s21_smart_calc(str, x);
+  ck_assert_double_eq(x, orig);
+}
+END_TEST
+
 START_TEST(s21_test_2) {
   double x = 0;
   double orig = 20;
@@ -369,6 +379,7 @@ Suite *suite_smart_calc(void) {
 
   tcase_add_test(tc, s21_test_0);
   tcase_add_test(tc, s21_test_1);
+  tcase_add_test(tc, s21_test_100);
   tcase_add_test(tc, s21_test_2);
   tcase_add_test(tc, s21_test_3);
   tcase_add_test(tc, calc_test);
