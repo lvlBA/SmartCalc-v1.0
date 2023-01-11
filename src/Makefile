@@ -37,6 +37,18 @@ install:
 uninstall:
 	rm -rf build* 	
 
+dvi:
+	open dvi.html
+
+dist:
+	rm -rf Archive_SmartCalc_v1.0/
+	mkdir Archive_SmartCalc_v1.0/
+	mkdir Archive_SmartCalc_v1.0/src
+	cp Makefile *.c *.h S21_calc/*.pro S21_calc/*.cpp S21_calc/*.ui Archive_SmartCalc_v1.0/src/
+	tar cvzf Archive_SmartCalc_v1.0.tgz Archive_SmartCalc_v1.0/
+	mv Archive_SmartCalc_v1.0.tgz $(HOME)/Desktop/
+	rm -rf Archive_SmartCalc_v1.0/	
+
 $(TARGET): ${SRC}
 	$(CC) -c $(STDFLAGS) $(SRC)
 	ar rc $@ $(OBJ)
