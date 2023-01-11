@@ -25,8 +25,8 @@ ifeq ($(OS),Darwin)
 	OPEN_CMD = open
 endif
 
-.DELETE_ON_ERROR:
-all: $(TARGET)
+all: install s21_smart.a test gcov_report
+
 
 install:	
 	make clean
@@ -73,7 +73,6 @@ endif
 	lcov -t "stest" -o s21_test.info -c -d .
 	genhtml -o report s21_test.info
 	$(OPEN_CMD) ./report/index.html
-
 
 
 clang:
