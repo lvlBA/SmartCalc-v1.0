@@ -23,9 +23,4 @@ void s21_pop(lexeme **head) {
   (*head) = prev->next;
 }
 
-lexeme top(lexeme **head) {
-  lexeme *tmp = (*head);
-  return *tmp;
-}
-
 int s21_next_sym(lexeme **head) { return (*head)->type; }
