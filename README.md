@@ -1,61 +1,8 @@
 # SmartCalc v1.0
 
-> При старте работы над проектом просим вас постараться хронометрировать время работы над проектом.
-> По завершении работы над проектом просим вас ответить на два вопроса [в этом опросе](https://forms.gle/MAxcabZjBPmTmhPv5)
-
 Implementation of SmartCalc v1.0.
 
 The russian version of the task can be found in the repository.
-
-
-## Contents
-
-0. [Preamble](#preamble)
-1. [Chapter I](#chapter-i) \
-   1.1. [Introduction](#introduction)
-2. [Chapter II](#chapter-ii) \
-   2.1. [Information](#information)
-3. [Chapter III](#chapter-iii) \
-   3.1. [Part 1](#part-1-implementation-of-smartcalc-v10)  
-   3.2. [Part 2](#part-2-bonus-credit-calculator)  
-   3.3. [Part 3](#part-3-bonus-deposit-calculator)
-
-
-## Preamble
-
-![SmartCalc](misc/eng/images/smartcalc.jpg)
-
-Planet Earth, USA, California, Cupertino, 10260 Bandley Drive, August 5, 1983.
-
-Muffled footsteps quickly approached the room. It was strange, as if the person walking was barefoot. A sudden stop at the door, some inarticulate dialogue apparently with a passerby... the door opens and he enters. As he looks around the room on the go, he quickly grabs a few people out of the crowd that was discussing something and gestured them to follow him.
-
-He speaks as he goes:
-
-*-- Andy, how are things with the greeting?*
-
-*-- Well, the presentation isn’t soon, so I'm sure it'll be ready in time.*
-
-*-- Okay Bill, I need an alpha version of MacPaint by next week, I want to show it to John Sculley*
-
-*-- But it’s development started only two weeks ago.*
-
-*-- That's why I'm giving you another week! Where's Chris? Has anyone seen him?*
-
-Chris Espinosa was outside the door in his office and heard that Jobs was looking for him. The fifth version of the Macintosh calculator had already been written, and he had a feeling that this was just the beginning. Except his morale was about to run out! Suddenly he heard somebody saying *"he seems to be in his office"* and then the swift footsteps of bunch of people rushed in Chris's direction. Fear took hold of him for a moment, but he quickly pulled himself together and came to his senses. After all, it was just a calculator! The door opened and Jobs entered the room, while the rest of people stayed behind the office.
-
-*-- Chris, how's our calculator doing?*
-
-*-- Here look, I fixed everything according to your comments and implemented some ideas of my own.*
-
-*-- Ok, so can it count expressions, taking into account the order of operations? And if you need to make a graph, can it do that too? And what about credits or deposits, can the user get some functionality from your calculator that will help him save dollars? And the interface, frankly, it's not that good.*
-
-Chris realized that the calculator couldn't do any of these things and was completely down. Jobs understood it without words, cheered him up a little and left. You watched everything from the sidelines, and you had a feeling that you have to help him. \
-You waited until everybody had left and then came to him to offer your help:
-
-*- Listen Chris, I have some free time in the evenings. I can help you with the calculator, because I see you are quite frustrated. Redoing the same thing a thousand times over is not a pleasant thing, although it's a big part of our job as programmers.*
-
-He became incredibly happy and immediately brought you up to speed. Well, you saved his job, all that’s left is to implement a calculator!
-
 
 ## Chapter I
 
@@ -66,7 +13,6 @@ In this project you will implement an extended version of the usual calculator, 
 Besides calculating expressions, it should also support the use of the _x_ variable and the graphing of the corresponding function.
 
 As for other improvements you can consider a credit and deposit calculator.
-
 
 ## Chapter II
 
@@ -223,21 +169,3 @@ The SmartCalc v1.0 program must be implemented:
       | Computes square root | sqrt(x) |
       | Computes natural logarithm | ln(x) |
       | Computes common logarithm | log(x) |
-
-
-## Part 2. Bonus. Credit calculator
-
-Provide a special mode "credit calculator" (you can take banki.ru and calcus.ru as an example):
-- Input: total credit amount, term, interest rate, type (annuity, differentiated)
-- Output: monthly payment, overpayment on credit, total payment
-
-
-## Part 3. Bonus. Deposit calculator
-
-Provide a special mode "deposit profitability calculator" (you can take banki.ru and calcus.ru as an example):
-- Input: deposit amount, deposit term, interest rate, tax rate, periodicity of payments, capitalization of interest, replenishments list, partial withdrawals list
-- Output: accrued interest, tax amount, deposit amount by the end of the term
-
-
-
-💡 [Tap here](https://forms.yandex.ru/u/6357d9a773cee730f2ba7e9d/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
